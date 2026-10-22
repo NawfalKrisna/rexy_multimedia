@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10140f">
+  <title>REXY — Dino Encounter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Rexy home"><span class="brand-icon">R</span><span>REXY <small>DINOSAUR ENCOUNTER</small></span></a>
+      <div class="live"><span class="live-dot"></span> SPECIMEN ONLINE</div>
+    </header>
+
+    <section class="stage">
+      <div class="copy">
+        <p class="eyebrow"><span></span> LATE CRETACEOUS · 68 MILLION YEARS AGO</p>
+        <h1>MEET THE<br><em>APEX</em><br>PREDATOR<span>.</span></h1>
+        <p class="intro">Dengarkan raungannya. Amati gerakannya. Berani berhadapan dengan penguasa prasejarah?</p>
+
+        <div class="actions">
+          <button id="roarBtn" class="btn primary"><span class="speaker">)))</span> AUMKAN!</button>
+          <button id="walkBtn" class="btn secondary"><span>↗</span> BERGERAK</button>
+          <button id="lookBtn" class="btn secondary"><span>◎</span> LIHAT SEKITAR</button>
+        </div>
+        <div class="audio-row">
+          <button id="playBtn" class="play" aria-label="Putar suara auman">▶</button>
+          <div class="audio-info"><div class="audio-title">T-REX ROAR <span id="audioState">READY</span></div><div class="track"><span id="trackProgress"></span></div></div>
+          <label class="volume" title="Volume suara"><span>VOL</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume suara"></label>
+        </div>
+        <p id="status" class="status" aria-live="polite">Rexy sedang mengamati wilayahnya. Pilih aksi untuk memulai.</p>
+        <div class="facts">
+          <div><small>SPESIES</small><strong>TYRANNOSAURUS REX</strong></div>
+          <div><small>TINGGI</small><strong>± 4 METER</strong></div>
+          <div><small>TIPE</small><strong>APEX PREDATOR</strong></div>
+        </div>
+      </div>
+
+      <div class="dino-panel" id="panel">
+        <div class="sun"></div><div class="halo"></div>
+        <div class="forest forest-back"></div><div class="forest forest-front"></div>
+        <div class="fog fog-one"></div><div class="fog fog-two"></div>
+        <div class="coordinates"><span>FIELD LOG / 001</span><span>CAUTION: HIGH RISK</span></div>
+        <div class="dino-wrap" id="dinoWrap">
+          <div class="shadow"></div>
+          <img id="trex" class="trex" src="assets/trex.png" alt="Ilustrasi T-Rex berwarna cokelat dengan mulut terbuka dan gigi tajam">
+          <div class="roar-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="panel-caption"><span>REXY / T-REX</span><span id="mood">MOOD: ALERT</span></div>
+        <div class="corner corner-tl"></div><div class="corner corner-br"></div>
+      </div>
+    </section>
+    <footer><span>REXY FIELD EXPERIENCE</span><span>VISUAL <b>•</b> AUDIO <b>•</b> ANIMATION</span><span>INTERACTIVE MULTIMEDIA PROJECT</span></footer>
+  </main>
+  <audio id="roarAudio" src="assets/trex-roar.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
